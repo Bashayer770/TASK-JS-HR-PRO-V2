@@ -46,4 +46,4 @@ console.log(employee, manager);
 Employees.push(this.employee);
 Manager.push(this.Manager);
 
-Employees.forEach((em) => console.log(em));
+Employees.forEach((em) => idBadge(em));
