@@ -32,17 +32,13 @@ class Manager extends Employees {
   }
 
   logManagerInfo(workigYears) {
-    const log = managersJSON.forEach(
+    managersJSON.forEach(
       console.log(
         `${this.name} since ${workigYears} , bonus ${this.bonusPercentage} `
       )
     );
   }
 }
-
-const employe = new Employees("hsjs", "modeer", 2019, 5000);
-const manager = new Manager(500, "bashayer", "modeer", 2019, 5000);
-console.log(employee, manager);
 
 const employees = employeesJSON.map(
   (employe) =>
@@ -53,7 +49,7 @@ const employees = employeesJSON.map(
       employe.yearJoined
     )
 );
-return employees;
+
 const managers = managersJSON.map(
   (manager) =>
     new Manager(
@@ -63,21 +59,22 @@ const managers = managersJSON.map(
       manager.yearJoined
     )
 );
-return managers;
 
 employeesJSON.forEach((em) => console.log(em.idBadge()));
 
 const superhero = employeesJSON.filter((x) => x.position == "Developers");
-return superhero;
+console.log(superhero);
 
 const increaseAmount = managersJSON.map((x) => x.salary + 5000);
-return increaseAmount;
+console.log(increaseAmount);
+
 const seniorExecutives = managers
   .filter((manager) => manager.yearJoined < 2012)
   .map((manager) => manager.name);
-return seniorExecutives;
+console.log(seniorExecutives);
 
 const lowestBonus = managers.find((manager) => manager.bonusPercentage === 0.1);
-return lowestBonus;
+console.log(lowestBonus);
 
 const promotionCandidate = employees.find((employee) => employee.salary > 8000);
+console.log(promotionCandidate);
