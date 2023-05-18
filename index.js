@@ -86,3 +86,19 @@ function PaidEmployee(employeesJSON) {
   );
   return mostPaidEmployee;
 }
+
+function totalSalaries(employeesJSON) {
+  const total = employeesJSON.reduce(
+    (totalSalary, salary) => totalSalary + salary.salary,
+    0
+  );
+  return total;
+}
+
+function highest(employeesJSON) {
+  const employeesSorted = employeesJSON.sort((a, b) => {
+    return a.yearJoined - b.yearJoined;
+  });
+
+  return employeesSorted[0];
+}
