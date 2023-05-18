@@ -23,8 +23,7 @@ class Manager extends Employees {
   }
 
   salaryIncrease(salaryIncrease) {
-    const ManSalary = 50 + salaryIncrease;
-    return ManSalary;
+    this.salary + salaryIncrease;
   }
 
   getWorkingYears(yearJoined) {
@@ -33,20 +32,40 @@ class Manager extends Employees {
   }
 
   logManagerInfo(workigYears) {
-    console.log(
-      `${this.name} since ${workigYears} , bonus ${this.bonusPercentage} `
+    const log = managersJSON.forEach(
+      console.log(
+        `${this.name} since ${workigYears} , bonus ${this.bonusPercentage} `
+      )
     );
   }
 }
 
-const employee = new Employees("hsjs", "modeer", 2019, 5000);
+const employe = new Employees("hsjs", "modeer", 2019, 5000);
 const manager = new Manager(500, "bashayer", "modeer", 2019, 5000);
 console.log(employee, manager);
 
-employeesJSON.push(this.employee);
-managersJSON.push(this.Manager);
+const employees = employeesJSON.map(
+  (employe) =>
+    new Employees(
+      employe.name,
+      employe.position,
+      employe.salary,
+      employe.yearJoined
+    )
+);
+return employees;
+const managers = managersJSON.map(
+  (manager) =>
+    new Manager(
+      manager.name,
+      manager.position,
+      manager.salary,
+      manager.yearJoined
+    )
+);
+return managers;
 
-employeesJSON.forEach((em) => idBadge(em));
+employeesJSON.forEach((em) => console.log(em.idBadge()));
 
 const superhero = employeesJSON.filter((x) => x.position == "Developers");
 return superhero;
