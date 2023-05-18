@@ -43,7 +43,13 @@ const employee = new Employees("hsjs", "modeer", 2019, 5000);
 const manager = new Manager(500, "bashayer", "modeer", 2019, 5000);
 console.log(employee, manager);
 
-Employees.push(this.employee);
-Manager.push(this.Manager);
+employeesJSON.push(this.employee);
+managersJSON.push(this.Manager);
 
 Employees.forEach((em) => idBadge(em));
+
+const superhero = employeesJSON.filter((x) => x.position == "Developers");
+return superhero;
+
+const increaseAmount = managersJSON.map((x) => x.salary + 5000);
+return increaseAmount;
