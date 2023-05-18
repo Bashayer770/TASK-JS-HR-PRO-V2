@@ -60,7 +60,7 @@ const managers = managersJSON.map(
     )
 );
 
-employeesJSON.forEach((em) => console.log(em.idBadge()));
+// employeesJSON.forEach((em) => console.log(em.idBadge()));
 
 const superhero = employeesJSON.filter((x) => x.position == "Developers");
 console.log(superhero);
@@ -94,7 +94,7 @@ function totalSalaries(employeesJSON) {
   );
   return total;
 }
-
+console.log(totalSalaries(employeesJSON));
 function highest(employeesJSON) {
   const employeesSorted = employeesJSON.sort((a, b) => {
     return a.yearJoined - b.yearJoined;
@@ -102,3 +102,4 @@ function highest(employeesJSON) {
 
   return employeesSorted[0];
 }
+console.log(highest(employeesJSON));
