@@ -23,7 +23,7 @@ class Manager extends Employees {
   }
 
   salaryIncrease(salaryIncrease) {
-    this.salary + salaryIncrease;
+    this.salary = this.salary + salaryIncrease;
   }
 
   getWorkingYears(yearJoined) {
@@ -78,3 +78,11 @@ console.log(lowestBonus);
 
 const promotionCandidate = employees.find((employee) => employee.salary > 8000);
 console.log(promotionCandidate);
+
+function PaidEmployee(employeesJSON) {
+  const mostPaidEmployee = employeesJSON.reduce(
+    (high, salary) => (high > salary ? high : salary),
+    0
+  );
+  return mostPaidEmployee;
+}
