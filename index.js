@@ -46,7 +46,7 @@ console.log(employee, manager);
 employeesJSON.push(this.employee);
 managersJSON.push(this.Manager);
 
-Employees.forEach((em) => idBadge(em));
+employeesJSON.forEach((em) => idBadge(em));
 
 const superhero = employeesJSON.filter((x) => x.position == "Developers");
 return superhero;
