@@ -72,3 +72,12 @@ return superhero;
 
 const increaseAmount = managersJSON.map((x) => x.salary + 5000);
 return increaseAmount;
+const seniorExecutives = managers
+  .filter((manager) => manager.yearJoined < 2012)
+  .map((manager) => manager.name);
+return seniorExecutives;
+
+const lowestBonus = managers.find((manager) => manager.bonusPercentage === 0.1);
+return lowestBonus;
+
+const promotionCandidate = employees.find((employee) => employee.salary > 8000);
